@@ -3,16 +3,20 @@
   --main-white: rgb(242, 241, 241);
 }
 
-body {
+html, body {
     background-color: var(--main-bg-color);
+    color: var(--main-white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 7px;
-    margin: 10px;
+    padding: 20px;
+    /* margin: 10px; */
 }
 
 header .logo {
@@ -22,7 +26,7 @@ header .logo {
 .navs {
   display: flex;
   flex-direction: row;
-  padding: 7px;
+  padding: 5px;
 }
 
 a {
@@ -32,17 +36,36 @@ a {
 
 li {
   list-style: none;
-  padding: 5px;
+  padding: 15px;
 }
 
 section {
+  flex: 1;
   background-color: var(--main-bg-color);
   color: var(--main-white);
   text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 section #title {
   color: var(--main-white);
   text-align: center;
+  font-size: 100px;
 }
 
+footer {
+  background-color: #222;
+  color: var(--main-white);
+  padding: 15px;
+  
+}
+
+.social-medias {
+  display: flex;
+  flex-direction: row;
+}

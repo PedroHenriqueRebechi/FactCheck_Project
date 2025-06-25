@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" type="image/png" href="assets/imgs/icons8-ok.svg">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,17 +28,23 @@
 
     <section>
         <h1 id="title">Fato ou Boato?</h1>
-        <h2>Verifique aqui</h2>
+        <h2>Num mundo cheio de fake news,<br> a verdade merece um lugar de confiança</h2>
+        <!-- <h3>Verifique aqui</h3> -->
 
         <form class="input-container" onsubmit="enviarTexto(event)">
-            <input type="text" id="queryInput" placeholder="Digite a informação..." required>
+            <input type="text" id="queryInput" placeholder="Verifique a informação..." required>
             <button type="sendQueryInput">Pesquisar</button>
         </form>
 
     </section>
 
     <footer>
-
+        <!-- <h3>Sobre mim</h3> -->
+        <ul class="social-medias">
+            <li><a href="">Github</a></li>
+            <li><a href="">LinkedIn</a></li>
+            <li><a href="">Instagram</a></li>
+        </ul>
     </footer>
 
     <script src="assets/js/factCheckApi.js"></script>
