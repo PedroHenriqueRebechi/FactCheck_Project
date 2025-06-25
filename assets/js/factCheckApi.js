@@ -1,4 +1,4 @@
-const api_key = `AIzaSyCKiD5w_hTB-wJRuPp9KO4mwvI4yqgGY3Y`;
+import { api_key } from './config.js';
 
 async function buscarFatos() {
   // const query = document.getElementById('queryInput').value;
