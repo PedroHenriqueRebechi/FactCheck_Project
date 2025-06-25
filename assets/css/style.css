@@ -1,0 +1,48 @@
+:root {
+  --main-bg-color: rgb(30, 5, 53);
+  --main-white: rgb(242, 241, 241);
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 7px;
+    margin: 10px;
+}
+
+header .logo {
+  width: 30px;
+}
+
+.navs {
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+}
+
+a {
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  padding: 5px;
+}
+
+section {
+  background-color: var(--main-bg-color);
+  color: var(--main-white);
+  text-align: center;
+}
+
+section #title {
+  color: var(--main-white);
+  text-align: center;
+}
+

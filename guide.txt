@@ -1,0 +1,61 @@
+🔧 PLANO GERAL DO PROJETO
+🖥️ 1. Website (HTML + JS + CSS)
+Campo de texto para digitar ou colar uma afirmação.
+
+Botão "Verificar".
+
+Mostra resultado com:
+
+Afirmação;
+
+Classificação (ex: falso, verdadeiro, enganoso);
+
+Fonte e link.
+
+🧩 2. Plugin de Navegador (usa o mesmo site como base)
+Ao selecionar um texto em qualquer site, o plugin envia isso para seu site e mostra a resposta.
+
+Assim, você não precisa duplicar código.
+
+☁️ 3. Backend ou direto com API?
+Como a Fact Check API não exige autenticação OAuth, você pode começar sem backend, mas:
+
+⚠️ Recomenda-se esconder a chave de API no backend futuramente.
+
+Ou usar Netlify Functions ou Vercel Functions de forma simples.
+
+🚀 VAMOS COMEÇAR COM O WEBSITE?
+Aqui está o esqueleto básico do seu projeto:
+
+📁 Estrutura de arquivos
+
+fact-check-site/
+├── index.html
+├── style.css
+└── script.js
+index.html
+
+✅ Próximos passos
+Testar localmente (abra index.html no navegador).
+
+Gerar sua chave de API:
+
+Acesse console.cloud.google.com
+
+Crie um projeto.
+
+Ative a Fact Check Tools API.
+
+Vá em "Credenciais" > "Criar chave de API".
+
+Integrar com plugin (posso te guiar depois usando chrome.runtime.sendMessage() ou fetch() para seu site).
+
+Publicar o site no GitHub Pages, Netlify, Vercel ou similar.
+
+Se quiser, posso:
+
+Criar o repositório inicial com tudo.
+
+Ajudar a gerar a API key.
+
+Já adaptar isso para o plugin de navegador.

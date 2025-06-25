@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="assets/imgs/icons8-ok.svg">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <title>Fact Check</title>
+</head>
+<body>
+    <header>
+        <img src="assets/imgs/icons8-ok-480.png" alt="logo" class="logo">
+        <nav>
+            <ul class="navs">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#sobre">Sobre o Projeto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1 id="title">Fato ou Boato?</h1>
+        <h2>Verifique aqui</h2>
+
+        <form class="input-container" onsubmit="enviarTexto(event)">
+            <input type="text" id="queryInput" placeholder="Digite a informação..." required>
+            <button type="sendQueryInput">Pesquisar</button>
+        </form>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="assets/js/factCheckApi.js"></script>
+</body>
+</html>
