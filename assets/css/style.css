@@ -1,26 +1,35 @@
 :root {
-  --main-bg-color: rgb(30, 5, 53);
+  --main-bg-color: rgb(30, 7, 51);
   --main-white: rgb(242, 241, 241);
+  --main-contrast: #1D344F;
 }
 
-html, body {
-    background-color: var(--main-bg-color);
-    color: var(--main-white);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../imgs/elements/circle.png'), url('../imgs/elements/circle2.png'), url('../imgs/elements/triangle3.png') ;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* background-position: top left, top right; */
+  background-position: -10% 25%, 75% -15%, 115% 10%;
+  background-size: 500px, 300px, 600px;
 }
+
+
 
 header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    /* margin: 10px; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  /* margin: 10px; */
 }
 
 header .logo {
-  width: 30px;
+  width: 35px;
+  padding-right: 15px;
 }
 
 .navs {
@@ -41,7 +50,6 @@ li {
 
 section {
   flex: 1;
-  background-color: var(--main-bg-color);
   color: var(--main-white);
   text-align: center;
   justify-content: center;
@@ -49,13 +57,103 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  margin: 10px;
+  margin: 20px 10px;
 }
 
 section #title {
   color: var(--main-white);
   text-align: center;
   font-size: 100px;
+}
+
+.slogan {
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 70px 10px 30px 10px;
+}
+
+.fact {
+  border: solid 1px;
+  border-radius: 50px;
+  padding: 30px;
+  margin: 0px 0px 10px 0px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(39, 9, 66, 0.84);
+}
+
+.claimReview {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.readMore {
+  width: 90px;
+  background-color: purple;
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+.review {
+  padding: 5px;
+  margin: 5px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.reviewName {
+  text-align: left;
+  /* padding: 20px; */
+  font-weight: bolder;
+}
+
+.site {
+  justify-content: flex-end;
+}
+
+.textualRating {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+}
+
+#queryInput {
+  width: 400px;
+  height: 50px;
+  border-radius: 50px;
+  border-style: none;
+  padding-left: 20px;
+}
+
+#sendQueryInput {
+  width: 120px;
+  height: 50px;
+  border-radius: 50px 50px 50px 50px;
+  border-style: none;
+  background-color: var(--main-contrast);
+  color: var(--main-white);
+   
+}
+
+.text {
+  text-align: justify;
+}
+
+.claimant {
+  padding: 10px 0px 0px 0px;
+  text-align: left;
+  font-weight: bold;
 }
 
 footer {

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/png" href="assets/imgs/icons8-ok.svg">
+    <link rel="shortcut icon" type="image/png" href="assets/imgs/Logo-Minimal.png">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/imgs/icons8-ok-480.png" alt="logo" class="logo">
+        <img src="assets/imgs/Logo-Minimal.png" alt="logo" class="logo">
         <nav>
             <ul class="navs">
                 <li><a href="#inicio">Início</a></li>
@@ -27,17 +27,63 @@
     </header>
 
     <section>
+
         <h1 id="title">Fato ou Boato?</h1>
-        <h2>Num mundo cheio de fake news,<br> a verdade merece um lugar de confiança</h2>
+        <h2 class="slogan">Num mundo cheio de fake news,<br> a verdade merece um lugar de confiança</h2>
         <!-- <h3>Verifique aqui</h3> -->
 
         <form class="input-container" onsubmit="enviarTexto(event)">
             <input type="text" id="queryInput" placeholder="Verifique a informação..." required>
-            <button type="sendQueryInput">Pesquisar</button>
+            <button type="sendQueryInput" id="sendQueryInput">Pesquisar</button>
         </form>
+
+        <div class="facts">
+            <!-- API aqui -->
+            <div class="fact">
+                <p class="text">Vacina contra gripe sempre teve baixíssima eficácia: pode levar à resposta imunológica inadequada e aumentar o risco de doença grave em pessoas sem exposição anterior ao vírus. Além disso, adultos saudáveis que recebem o imunizante tem apenas 1% de proteção</p>
+                <p class="claimant">Fonte da informação: Boatos em redes sociais</p>
+
+                <h3>Fontes verificadoras</h3> <!-- Não tem na API -->
+                <div class="claimReview">
+                    <div class="review">
+                        
+                        <span class="reviewName">"Postagem distorce artigos científicos e desinforma sobre vacina contra gripe"</span>
+                        <span>Estadão  |  <a href="estadao.com.br">estadao.com.br</a></span>
+                        <button class="readMore"><a href="https://www.estadao.com.br/estadao-verifica/vacina-gripe-baixa-eficacia-estudos-enganoso/">Leia mais</a></button>
+    
+                        <span class="textualRating">Informação enganosa</span>
+                    </div>
+                    
+                    <div class="review">
+                        
+                        <span class="reviewName">"Postagem distorce artigos científicos e n sei oq"</span>
+                        <span>Estadão  |  <a href="estadao.com.br">estadao.com.br</a></span>
+                        <button class="readMore"><a href="https://www.estadao.com.br/estadao-verifica/vacina-gripe-baixa-eficacia-estudos-enganoso/">Leia mais</a></button>
+    
+                        <span class="textualRating">Informação enganosa</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="fact">
+                <p class="text">Vacina contra gripe sempre teve baixíssima eficácia: pode levar à resposta imunológica inadequada e aumentar o risco de doença grave em pessoas sem exposição anterior ao vírus. Além disso, adultos saudáveis que recebem o imunizante tem apenas 1% de proteção</p>
+                <p class="claimant">Fonte da informação: Boatos em redes sociais</p>
+
+                <div class="claimReview">
+                    <h2>Fontes verificadoras</h2> <!-- Não tem na API -->
+                    <p>Estadão</p>
+                    <p>estadao.com.br</p>
+                    <h3>Postagem distorce artigos científicos e desinforma sobre vacina contra gripe</h3>
+                    <p>https://www.estadao.com.br/estadao-verifica/vacina-gripe-baixa-eficacia-estudos-enganoso/</p>
+                    <p>Informação enganosa</p>
+                </div>
+            </div>
+        </div>
 
     </section>
 
+    
     <footer>
         <!-- <h3>Sobre mim</h3> -->
         <ul class="social-medias">
@@ -46,6 +92,7 @@
             <li><a href="">Instagram</a></li>
         </ul>
     </footer>
+
 
     <script src="assets/js/factCheckApi.js"></script>
 </body>
