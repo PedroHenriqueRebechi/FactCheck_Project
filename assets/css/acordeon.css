@@ -1,0 +1,38 @@
+.acordeon .trigger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon-header {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.acordeon-arrow {
+    width: 30px;
+    transition: transform .2s linear;
+}
+
+.acordeon:has(.open) .acordeon-arrow {
+    transform: rotate(180deg);
+}
+
+.acordeon-body {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.acordeon-body.open {
+    opacity: 1;
+    height: 100%;
+}
