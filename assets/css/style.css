@@ -14,12 +14,10 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url('../imgs/elements/circle.png'), url('../imgs/elements/circle2.png'), url('../imgs/elements/triangle3.png'), url('../imgs/elements/circle3.png');
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-
-  background-position: -8vw 15vh, 70vw -15vh, 70vw 25vh, 20vw 120vh;
-
-  background-size: 30vw, 15vw, 40vw, 20vw;
+  background-image: url('../imgs/elements/circle.png'), url('../imgs/elements/circle2.png'), url('../imgs/elements/triangle3.png'), url('../imgs/elements/circle3.png'), url('../imgs/elements/circle.png');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: -8vw 15vh, 70vw -15vh, 70vw 25vh, 20vw 120vh, 80vw 150vh;
+  background-size: 30vw, 15vw, 40vw, 20vw, 25vw;
 }
 
 
@@ -70,10 +68,6 @@ section #title {
   font-size: 100px;
 }
 
-#sendQueryInput {
-  cursor: pointer;
-}
-
 .slogan {
   padding: 10px;
   margin-bottom: 50px;
@@ -106,7 +100,7 @@ h2 {
 }
 
 h3 {
-  padding: 25px 0px 20px 0px;
+  padding: 10px 0px 0px 0px;
 }
 
 .claimReview {
@@ -136,6 +130,10 @@ h3 {
   cursor: pointer;
 }
 
+.readMore:active {
+  background-color: #1e1d47;
+}
+
 .review {
   padding: 15px;
   margin: 5px;
@@ -145,7 +143,7 @@ h3 {
   max-width: 600px;
   border: 2px solid rgba(128, 0, 128, 0);
   border-radius: 25px;
-  background-color:  #413e92;
+  background-color: #3a377c;
   flex: 1;
   min-width: 350px;
 }
@@ -172,12 +170,13 @@ h3 {
 }
 
 .textualRating {
-  text-align: right;
+  text-align: center;
   display: flex;
   justify-content: center;
 }
 
 #queryInput {
+  min-width: 200px;
   width: 400px;
   height: 50px;
   border-radius: 50px;
@@ -190,9 +189,20 @@ h3 {
   height: 50px;
   border-radius: 50px 50px 50px 50px;
   border-style: none;
-  background-color: var(--main-contrast);
+  background-color: #44889e;
   color: var(--main-white);
-   
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 6px;
+}
+
+#sendQueryInput:hover {
+  background-color: #55aac6;
+  transform: scale(1.05);
+}
+
+#sendQueryInput:active {
+  transform: scale(0.9);
 }
 
 .claimantText {
