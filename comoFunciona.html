@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="assets/imgs/logo.png">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/acordeon.css">
+    <link rel="stylesheet" href="assets/css/comoFunciona.css">
+
+
+    <title>Fact Check</title>
+</head>
+<body>
+    <header>
+        <img src="assets/imgs/logo.png" alt="logo" class="logo">
+        <nav>
+            <ul class="navs">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="comoFunciona.html">Como Funciona</a></li>
+                <li><a href="sobre.html">Sobre o Projeto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="systemDescription">
+            <h1 class="comoFunciona">Como o sistema foi desenvolvido?</h1>
+            <p>Esta plataforma foi desenvolvida com foco em combater a desinformação de forma simples e acessível, utilizando tecnologias modernas e confiáveis.</p>
+            <br>
+            <p>Quando você insere uma dúvida, notícia ou frase que deseja verificar, o sistema faz uma requisição à <strong>Google Fact Check API</strong>, uma ferramenta oficial do Google que reúne verificações feitas por organizações especializadas no mundo todo.</p>
+            <br>
+            <p>A aplicação foi construída com as seguintes tecnologias:</p>
+            <ul>
+                <li class="descriptionItem"><strong>HTML, CSS e JavaScript:</strong> para criar uma interface leve, responsiva e interativa.</li>
+                <li class="descriptionItem"><strong>Google Fact Check API:</strong> responsável por buscar os resultados das checagens de fatos.</li>
+                <li class="descriptionItem"><strong>Fetch API:</strong> utilizada para conectar o site à API e trazer os dados em tempo real.</li>
+            </ul>
+            <br>
+            <p>A resposta da API retorna dados como:</p>
+            <ul>
+                <li class="descriptionItem">A afirmação que foi verificada</li>
+                <li class="descriptionItem">Quem realizou a checagem (Fonte da informação)</li>
+                <li class="descriptionItem">A classificação do fato (verdadeiro, falso, enganoso etc.)</li>
+                <li class="descriptionItem">Link para a fonte completa</li>
+            </ul>
+        </div>
+    </section>
+
+    
+    <footer>
+        <ul class="social-medias">
+            <li><a href="https://github.com/PedroHenriqueRebechi" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/pedro-henrique-rebechi/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/factCheckApi.js"></script>
+    <script src="assets/js/acordeon.js"></script>
+</body>
+</html>

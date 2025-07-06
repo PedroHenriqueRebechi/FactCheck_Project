@@ -1,0 +1,27 @@
+.systemDescription {
+    border: solid 2px transparent;
+    border-radius: 25px;
+    margin: 0px 0px 10px 0px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(39, 9, 66, 0.821);
+    padding: 30px;
+    max-width: 900px;
+}
+
+.comoFunciona {
+    padding-bottom: 20px;
+    
+}
+
+p {
+    text-align: justify;
+    padding-bottom: 5px;
+    margin: 0px 25px;
+}
+
+.descriptionItem {
+    padding: 5px;
+    text-align: left;
+    margin: 0px 55px;
+    list-style: disc;
+}

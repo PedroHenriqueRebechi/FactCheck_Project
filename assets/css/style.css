@@ -20,8 +20,6 @@ body {
   background-size: 30vw, 15vw, 40vw, 20vw, 25vw;
 }
 
-
-
 header {
   display: flex;
   align-items: center;
@@ -43,6 +41,11 @@ header .logo {
 a {
   color: var(--main-white);
   text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 li {
@@ -84,7 +87,6 @@ section #title {
 .fact {
   border: solid 2px transparent;
   border-radius: 25px;
-  /* padding: 30px; */
   margin: 0px 0px 10px 0px;
   backdrop-filter: blur(10px);
   background-color: rgba(39, 9, 66, 0.821);
@@ -203,11 +205,6 @@ h3 {
 
 #sendQueryInput:active {
   transform: scale(0.9);
-}
-
-.claimantText {
-  /* text-align: left;
-  text-align: justify; */
 }
 
 .claimant {
