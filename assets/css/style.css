@@ -68,12 +68,14 @@ section {
 section #title {
   color: var(--main-white);
   text-align: center;
-  font-size: 100px;
+  font-size: 8vw;
+
 }
 
 .slogan {
   padding: 10px;
   margin-bottom: 50px;
+  font-size: 2vw;
 }
 
 .facts {
@@ -178,8 +180,8 @@ h3 {
 }
 
 #queryInput {
-  min-width: 200px;
-  width: 400px;
+  min-width: 250px;
+  width: 50vw;
   height: 50px;
   border-radius: 50px;
   border-style: none;
@@ -220,4 +222,52 @@ footer {
 .social-medias {
   display: flex;
   flex-direction: row;
+}
+
+.rumor {
+  display: inline;
+}
+
+@media (max-width: 1100px) {
+  .rumor {
+    display: block; /* quebra a linha nessa palavra */
+  }
+
+  section #title {
+    font-size: 10vw;
+  }
+
+  .slogan {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 995px) {
+    body {
+        background-position: -8vw 15vh, 70vw -15vh, 70vw 25vh, 20vw 120vh, 80vw 150vh;
+        background-size: 30vw, 25vw, 50vw, 25vw, 30vw;
+    }
+
+    section #title {
+      font-size: 11vw;
+    }
+
+    .slogan {
+      font-size: 3vw;
+    }
+}
+
+@media (max-width: 690px) {
+  body {
+    background-position: -20vw 15vh, 70vw -15vh, 65vw 25vh, 10vw 140vh, 80vw 190vh;
+    background-size: 35vw, 40vw, 50vw, 30vw, 35vw;
+    }
+
+    section #title {
+      font-size: 18vw;
+    }
+
+    .slogan {
+      font-size: 4vw;
+    }
 }
