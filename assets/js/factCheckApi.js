@@ -1,5 +1,28 @@
-
 async function traduzirTexto(texto) {
+  const maxChars = 500;
+
+  // Se o texto for curto, traduz direto
+  if (texto.length <= maxChars) {
+    return await traduzirParte(texto);
+  }
+
+  // Se for longo, divide em partes
+  const partes = [];
+  for (let i = 0; i < texto.length; i += maxChars) {
+    partes.push(texto.substring(i, i + maxChars));
+  }
+
+  let textoTraduzido = '';
+  for (const parte of partes) {
+    const traducao = await traduzirParte(parte);
+    textoTraduzido += traducao + ' ';
+  }
+
+  return textoTraduzido.trim();
+}
+
+// Função auxiliar que traduz até 500 caracteres
+async function traduzirParte(texto) {
   const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(texto)}&langpair=en|pt`;
 
   try {
@@ -7,11 +30,10 @@ async function traduzirTexto(texto) {
     const dados = await resposta.json();
     return dados.responseData.translatedText;
   } catch (erro) {
-    console.error('Erro ao traduzir:', erro);
-    return texto; // Retorna o texto original em caso de erro
+    console.error('Erro ao traduzir parte:', erro);
+    return texto;
   }
 }
-
 
 
 async function buscarFatos(query) {
@@ -31,24 +53,35 @@ async function buscarFatos(query) {
     let html = `<h2>Resultados para: "${query}"</h2>`;
 
     for (const item of dados.claims) {
-      const textoTraduzido = await traduzirTexto(item.text); // Traduzindo para inglês, por exemplo
+      // Verifica se há pelo menos um review em 'pt' ou 'en'
+      const hasValidLanguage = item.claimReview.some(
+        review => review.languageCode === 'pt' || review.languageCode === 'en'
+      );
 
-      // Monta o HTML para todas as fontes verificadoras (claimReview)
+      if (!hasValidLanguage) continue; // Pula se não houver review em 'pt' ou 'en'
+
+      const textoTraduzido = await traduzirTexto(item.text);
+
       let reviewsHtml = '';
+
       for (const review of item.claimReview) {
-        const tituloTraduzido = await traduzirTexto(review.title);
-        reviewsHtml += `
-          <div class="review">
-            <span class="reviewName">${tituloTraduzido}</span>
-            <span class="publisher">${review.publisher.name}  |  <a href="${review.publisher.site}" target="_blank">${review.publisher.site}</a></span>
-            <a href="${review.url}" target="_blank" class="readMore">Leia mais</a>
-            <span class="textualRating">Resultado da verificação:</span>
-            <span class="textualRating"><strong>${review.textualRating}</strong></span>
-          </div>
-        `;
+        if (review.languageCode === 'pt' || review.languageCode === 'en') {
+          const tituloTraduzido = await traduzirTexto(review.title);
+
+          reviewsHtml += `
+            <div class="review">
+              <span class="reviewName">${tituloTraduzido}</span>
+              <span class="publisher">${review.publisher.name} | 
+                <a href="${review.publisher.site}" target="_blank">${review.publisher.site}</a>
+              </span>
+              <a href="${review.url}" target="_blank" class="readMore">Leia mais</a>
+              <span class="textualRating">Resultado da verificação:</span>
+              <span class="textualRating"><strong>${review.textualRating}</strong></span>
+            </div>
+          `;
+        }
       }
 
-      // Insere as fontes verificadoras no acordeon do item
       html += `
         <div class="fact">
           <div class="acordeon">
@@ -77,6 +110,7 @@ async function buscarFatos(query) {
     document.querySelector('.facts').innerHTML = `<p style="color:red;">Erro ao buscar os dados. Tente novamente.</p>`;
   }
 }
+
 
 function enviarTexto(event) {
   event.preventDefault(); // Previne o comportamento padrão do formulário
