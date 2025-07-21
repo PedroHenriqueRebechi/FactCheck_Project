@@ -7,10 +7,9 @@ Este projeto é uma aplicação web que permite ao usuário **pesquisar alegaç�
 
 ## 🚀 Funcionalidades
 
-- 🔎 Busca de fatos e alegações usando a Google Fact Check API
-- 🌐 Tradução automática do conteúdo (inglês → português) com a API MyMemory
-- 📜 Exibição em formato interativo com **acordeões**
-- 🧠 Filtro inteligente por idioma (`pt` ou `en`)
+- 🔎 Busca de fatos e alegações usando a **Google Fact Check API**
+- 🌐 Tradução automática do conteúdo (inglês → português) com a **API MyMemory**
+- 📜 Exibição em formato interativo com acordeons
 - 💬 Mensagens amigáveis para erros, carregamento e ausência de resultados
 - ⚙️ Possibilidade de melhoria: Extensão de navegador
 
@@ -22,7 +21,6 @@ Este projeto é uma aplicação web que permite ao usuário **pesquisar alegaç�
 - **Google Fact Check Tools API**
 - **MyMemory Translation API**
 
----
 
 ## 📦 Como usar
 
@@ -37,6 +35,7 @@ Abra o arquivo index.html no navegador.
 
 Insira um termo no campo de busca e aguarde os resultados da verificação!
 
+---
 ⚠️ Importante: você precisa de uma chave da API do Google. <br>
 
 🔑 Como obter a chave da API (Google Fact Check)
@@ -47,27 +46,44 @@ Insira um termo no campo de busca e aguarde os resultados da verificação!
 
 Substitua no seu código:
 
-js
-Copy
-Edit
 const api_key = "SUA_CHAVE_AQUI";
 
-<br>
+---
 
 🧪 Exemplo de uso
-Pesquisando "Terra é plana", o sistema retorna verificações de fontes confiáveis como AFP, PolitiFact e Aos Fatos, com link, avaliação textual e tradução do conteúdo original.
+Pesquisando "Terra é plana", o sistema retorna verificações de fontes confiáveis como AFP, PolitiFact e Aos Fatos, com link, avaliação textual e tradução do conteúdo original. <br>
+
+<img width="1900" height="1000" alt="image" src="https://github.com/user-attachments/assets/70637d53-b878-44b1-b512-3166212d8d76" /> <br>
+<img width="1900" height="1000" alt="image" src="https://github.com/user-attachments/assets/519b1d16-9220-455c-883e-196ab4a74f60" />
+
 
 📁 Estrutura do projeto
+<pre>
+|   comoFunciona.html
+|   estrutura.txt
+|   index.html
+|   README.md
+|   
++---assets
+|   |   .gitignore
+|   |   
+|   +---css
+|   |       acordeon.css
+|   |       comoFunciona.css
+|   |       global.css
+|   |       style.css
+|   |       
+|   ----imgs
+|   |   
+|   |           
+|   \---js
+|           acordeon.js
+|           config.js
+|           factCheckApi.js
 
-/
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   └── imgs/
-│       └── arrow-top.svg
+</pre>
+### ✨ Melhorias futuras
 
-✨ Melhorias futuras
 🔄 Tradução em lote paralela com Promise.all
 
 💡 Cache de traduções para reduzir requisições
@@ -76,6 +92,7 @@ Pesquisando "Terra é plana", o sistema retorna verificações de fontes confiá
 
 💾 Armazenamento de histórico (localStorage)
 
-🧑‍💻 Autor
-Pedro Henrique Rebechi
+---
+
+🧑‍💻 Autor: Pedro Henrique Rebechi <br>
 🧠 Apaixonado por tecnologia, IA e combate à desinformação
