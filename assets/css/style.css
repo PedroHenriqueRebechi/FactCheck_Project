@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   background-image: url('../imgs/elements/circle.png'), url('../imgs/elements/circle2.png'), url('../imgs/elements/triangle3.png'), url('../imgs/elements/circle3.png'), url('../imgs/elements/circle.png');
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: -8vw 15vh, 70vw -15vh, 70vw 25vh, 20vw 120vh, 80vw 150vh;
+  background-position: -14vw 15vh, 70vw -15vh, 70vw 25vh, 20vw 120vh, 80vw 150vh;
   background-size: 30vw, 15vw, 40vw, 20vw, 25vw;
 }
 
